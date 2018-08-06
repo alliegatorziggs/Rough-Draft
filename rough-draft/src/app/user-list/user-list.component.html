@@ -1,0 +1,9 @@
+<button (click)="getAllUsers()">Get All Users</button>
+<br>
+{{userData}}
+<br>
+<ul>
+<li *ngFor="let u of users">
+  {{ u.userName }}
+</li>
+</ul>

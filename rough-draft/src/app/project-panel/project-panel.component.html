@@ -1,0 +1,25 @@
+<div class="w3-container w3-card w3-white w3-margin-bottom w3-text-gray" style="height: 400px; position: relative">
+    <h1 class = "w3-text-blue-grey">{{ project.projectName }}</h1>
+    <div *ngIf="!addFileDialog">
+      <ul class="w3-ul">
+        <li><button class="w3-btn" onclick="document.getElementById('addfilediv').style.display='block'"><img src="../assets/file-plus-sign.png">Add file</button></li>
+        <li><button class="w3-btn" (click)="deleteProject()"><img src="../assets/delete-icon.png">Delete Project</button></li>
+      </ul>
+    </div>
+
+   
+    <div id="addfilediv" class="w3-modal">
+      <div class="w3-modal-content">
+        <header class="w3-container">
+          <span onclick="document.getElementById('addfilediv').style.display='none'"
+          class="w3-button w3-display-topright">&times;</span>
+          <h2 class = "w3-text-blue-grey">Upload New File</h2>
+        </header>
+        <div class="w3-container">
+          <label for="title">File path: </label>
+          <input class = "w3-input w3-text-grey" type="text" id="title" placeholder="your file path...">
+          <button class="w3-btn" (click)="addFile()"><img src="../assets/plus-sign.png">  Create</button>
+        </div>
+      </div>
+    </div>
+</div>

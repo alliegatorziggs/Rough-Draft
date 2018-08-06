@@ -1,0 +1,6 @@
+
+<ul class="w3-ul">
+    <li *ngFor="let p of projects; index as i">
+      <button class="w3-btn w3-text-blue-grey" (click)="selectProject(p)"><img src="../assets/book-icon.png">{{ p.projectName }}</button>
+    </li>
+</ul>
